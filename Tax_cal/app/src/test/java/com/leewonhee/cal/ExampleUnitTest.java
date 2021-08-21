@@ -1,4 +1,4 @@
-package com.leewonhee.pos;
+package com.leewonhee.cal;
 
 import org.junit.Test;
 
