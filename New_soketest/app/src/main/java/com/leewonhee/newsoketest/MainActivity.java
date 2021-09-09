@@ -28,10 +28,10 @@ import java.net.Socket;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     boolean check=true;
-    Button connect_btn;                 // ip 받아오는 버튼
+    Button connect_btn;                 // 서버 연결
     Button start_btn;
-    EditText ip_edit;               // ip 에디트
-    TextView show_text;             // 서버에서온거 보여주는 에디트
+    EditText ip_edit;               // ip 입력
+    TextView show_text;             // 서버 수신값 출력
     // 소켓통신에 필요한것
     private String html = "";
     private Handler mHandler;
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 check=false;
-                Log.w("버퍼","정지정지");
+                Log.w("버퍼","정지정지"); // 종료버튼 정지
             }
         });
 
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.connect_btn:// ip 받아오는 버튼
+            case R.id.connect_btn:// ip 커넥트
                 check=true;
                 connect();
 
